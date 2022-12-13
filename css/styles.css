@@ -169,12 +169,21 @@ align-items: center;
 /* Hero */
 
 .hero {
+    max-width: 1440px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 192px;
     padding-bottom: 192px;
 
-    color: var(--white);
+    background-image:linear-gradient(to right, rgba(46,47,66, 0.7), rgba(46,47,66, 0.7)), url(../images/hero-bg.jpg);
     background-color: var(--dark);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
     text-align: center;
+    color: var(--white);
 }
 
 .hero-title {
@@ -213,12 +222,21 @@ align-items: center;
 
 .advantage {
     margin-top: 0;
-    margin-bottom: 8px;
+    margin: 8px 0;
 
     font-size: 24px;
     font-weight: 500;
     line-height: 1.2;  
     color: var(--dark);   
+}
+
+.advantage-icon {
+    width: 100%;
+    height: 112px;
+    background-color:var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .advantage ~ p {
@@ -268,8 +286,11 @@ align-items: center;
 .team-card {
     background-color: var(--white);
     text-align: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding: 32px 16px;
+}
+
+.team-card p {
+    padding-bottom: 8px;
 }
 
 .team-name {
@@ -284,6 +305,24 @@ align-items: center;
     display: block;
 }
 
+.team-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+}
+
+.team-link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Customers */
 
 .customers {
@@ -292,24 +331,20 @@ align-items: center;
 }
 
 .customer-item {
-    display: block;
-    padding: 16px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 88px;
     border: 1px solid var(--subtle-text);
     border-radius: 4px;
+    fill: var(--customers);
 }
 
 .customer-item:hover,
 .customer-item:focus {
     border: 1px solid var(--primary);
     border-radius: 4px;
-}
-
-.customer-logo {
-    fill: var(--customers);
-}
-
-.customer-logo:hover,
-.customer-logo:focus {
     fill: var(--primary);
 }
 
